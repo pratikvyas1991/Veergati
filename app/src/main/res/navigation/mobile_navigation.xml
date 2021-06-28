@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_bills">
+
+    <fragment
+        android:id="@+id/nav_bills"
+        android:name="com.veergati.veergati.ui.bills.BillsFragment"
+        android:label="@string/menu_bills"
+        tools:layout="@layout/fragment_bills">
+
+        <action
+            android:id="@+id/action_nav_bills_to_billsDetailsFragment"
+            app:destination="@id/billsDetailsFragment" />
+        <action
+            android:id="@+id/action_nav_bills_to_nav_stocks"
+            app:destination="@id/nav_stocks" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_stocks"
+        android:name="com.veergati.veergati.ui.stocks.StocksFragment"
+        android:label="@string/menu_stocks"
+        tools:layout="@layout/fragment_stocks">
+        <action
+            android:id="@+id/action_nav_stocks_to_stocksDetailsFragment"
+            app:destination="@id/stocksDetailsFragment" />
+        <action
+            android:id="@+id/action_stocks_list_to_add_stocks"
+            app:destination="@id/addStockFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/billsDetailsFragment"
+        android:name="com.veergati.veergati.BillsDetailsFragment"
+        android:label="@string/menu_bills_details"
+        tools:layout="@layout/bills_details_fragment" >
+        <action
+            android:id="@+id/action_billsDetailsFragment_to_nav_bills2"
+            app:destination="@id/nav_bills" />
+        <argument
+            android:name="billdata"
+            app:argType="com.veergati.veergati.data.BillData" />
+    </fragment>
+    <fragment
+        android:id="@+id/stocksDetailsFragment"
+        android:name="com.veergati.veergati.StocksDetailsFragment"
+        android:label="stocks_details_fragment"
+        tools:layout="@layout/stocks_details_fragment" >
+        <action
+            android:id="@+id/action_stocksDetailsFragment_to_nav_stocks2"
+            app:destination="@id/nav_stocks" />
+    </fragment>
+    <fragment
+        android:id="@+id/scrollingFragment"
+        android:name="com.veergati.veergati.ScrollingFragment"
+        android:label="fragment_scrolling"
+        tools:layout="@layout/fragment_scrolling" >
+        <action
+            android:id="@+id/action_scrollingFragment_to_nav_bills"
+            app:destination="@id/nav_bills" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addStockFragment"
+        android:name="com.veergati.veergati.ui.stocks.AddStocksFragment"
+        android:label="Add Stocks"
+        tools:layout="@layout/fragment_add_stocks" >
+        <action
+            android:id="@+id/action_add_stocks_stockList"
+            app:destination="@id/nav_stocks" />
+    </fragment>
+
+
+</navigation>

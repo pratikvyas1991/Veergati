@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.bills.BillsFragment"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_weight="20"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:id="@+id/item_name"
+        android:hint="Item Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_weight="20"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:id="@+id/item_quantity"
+        android:hint="Item Quantity"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_weight="20"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:id="@+id/item_price"
+        android:hint="Item Price"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_weight="20"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:id="@+id/item_unit"
+        android:hint="Item Unit"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_weight="20"
+        android:background="@color/colorAccent"
+        android:layout_gravity="center"
+        android:text="Save"
+        android:textColor="@color/whitecolour"
+        android:id="@+id/btn_save_Stock"
+        android:padding="5dp"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
